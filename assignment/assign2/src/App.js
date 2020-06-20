@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Validation from './ValidationComponent/Validation';
-import Char from './CharComponent/Char';
+import Validation from './Validation/Validation';
+import Char from './Char/Char';
 
 class App extends Component {
 
@@ -23,9 +23,9 @@ class App extends Component {
 
   render() {
     const charList = this.state.userInput.split('').map((ch, index) => {
-      return <Char 
-              character={ch} 
-              key={index} 
+      return <Char
+              character={ch}
+              key={index}
               click={() => this.deleteCharHandler(index)} />
     });
 
